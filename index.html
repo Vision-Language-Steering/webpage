@@ -133,13 +133,13 @@
     }
 
     .btn-outline {
-      background: transparent;
-      color: white;
+      background: white;
+      color: var(--bg-dark);
       border: 1px solid rgba(255,255,255,0.3);
     }
 
     .btn-outline:hover {
-      background: rgba(255,255,255,0.1);
+      background: #f1f5f9;
       border-color: rgba(255,255,255,0.5);
     }
 
@@ -577,11 +577,11 @@
         <a href="./VLS.pdf" class="btn btn-primary">
           <i class="fas fa-file-pdf"></i> Paper
         </a>
-        <a href="#" class="btn btn-outline" style="opacity: 0.6; cursor: not-allowed;" onclick="return false;">
-          <i class="ai ai-arxiv"></i> arXiv (Coming Soon)
+        <a href="https://arxiv.org/pdf/2602.03973" class="btn btn-outline" target="_blank">
+          <i class="ai ai-arxiv"></i> arXiv
         </a>
-        <a href="#" class="btn btn-outline" style="opacity: 0.6; cursor: not-allowed;" onclick="return false;">
-          <i class="fab fa-github"></i> Code (Coming Soon)
+        <a href="https://github.com/Vision-Language-Steering/code" class="btn btn-outline" target="_blank">
+          <i class="fab fa-github"></i> Code
         </a>
       </div>
     </div>
@@ -809,40 +809,152 @@
     <h3 class="video-section-title">Task Perturbation (Language OOD)</h3>
     <div class="video-grid">
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Goal Suite</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_goal.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Goal - Original</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Spatial Suite</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_goal_base.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Goal - Base Policy (Fail)</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Long (10) Suite</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_goal_vls.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Goal - VLS (Success)</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Object Suite</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_spatial.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Spatial - Original</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_spatial_base.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Spatial - Base Policy (Fail)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_spatial_vls.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Spatial - VLS (Success)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_10.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Long10 - Original</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_10_base.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Long10 - Base Policy (Fail)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_10_vls.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Long10 - VLS (Success)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_object.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Object - Original</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_object_base.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Object - Base Policy (Fail)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/task_object_vls.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Object - VLS (Success)</div>
       </div>
     </div>
 
-    <h3 class="video-section-title">Position Perturbation (Observation OOD)</h3>
+    <h3 class="video-section-title" style="margin-top: 40px;">Position Perturbation (Observation OOD)</h3>
     <div class="video-grid">
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Goal Suite</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_goal.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Goal - Original</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Spatial Suite</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_goal_base.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Goal - Base Policy (Fail)</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Long (10) Suite</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_goal_vls.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Goal - VLS (Success)</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Object Suite</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_spatial.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Spatial - Original</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_spatial_base.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Spatial - Base Policy (Fail)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_spatial_vls.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Spatial - VLS (Success)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_10.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Long10 - Original</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_10_base.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Long10 - Base Policy (Fail)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_10_vls.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Long10 - VLS (Success)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_object.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Object - Original</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_object_base.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Object - Base Policy (Fail)</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/libero/pos_object_vls.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Object - VLS (Success)</div>
       </div>
     </div>
   </div>
@@ -863,35 +975,49 @@
     <h3 class="video-section-title">In-Distribution Tasks</h3>
     <div class="video-grid">
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Place orange on red plate</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/l2_orange_red.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">L1: Place orange on red plate</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Place orange on green plate</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/l1_orange_green.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">L1: Place orange on green plate</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Place banana on red plate</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/l2_banana_green.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">L2: Place banana on green plate</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
-        <div class="video-label">Place orange on green plate (L2)</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/l2_orange_red.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">L2: Place orange on red plate</div>
       </div>
     </div>
 
     <h3 class="video-section-title">Out-of-Distribution Tasks</h3>
     <div class="video-grid">
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/l3_attr.mp4" type="video/mp4">
+        </video>
         <div class="video-label">Appearance Shift: Yellow plate</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/l3_pos.mp4" type="video/mp4">
+        </video>
         <div class="video-label">Position Shift: Swapped plates</div>
       </div>
       <div class="video-card">
-        <div class="video-placeholder">Video coming soon</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/l3_mug.mp4" type="video/mp4">
+        </video>
         <div class="video-label">Object Shift: Place mug on plate</div>
       </div>
     </div>
