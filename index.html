@@ -1035,6 +1035,42 @@
   </div>
 </section>
 
+<!-- Generalization: Beyond Training Distributions -->
+<section>
+  <div class="container">
+    <h2 class="section-title">
+      <span class="icon"><i class="fas fa-brain"></i></span>
+      Generalization: Beyond Training Distributions
+    </h2>
+    <p class="prose">
+      A base policy trained on stacking 2 cubes and 4 cubes cannot generalize to stacking 3 cubes
+      (~0% success rate). VLS enables the same policy to generalize cleanly beyond seen configurations.
+    </p>
+
+    <h3 class="video-section-title">Generalization Results</h3>
+    <div class="video-grid">
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/stack_2.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">In-Distribution: Stack 2 cubes</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/stack_3.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">Out-of-Distribution: Stack 3 cubes</div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/stack_4.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">In-Distribution: Stack 4 cubes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Open-World Steering Comparison -->
 <section class="alt-bg">
   <div class="container">
