@@ -435,6 +435,8 @@
       border-radius: 12px;
       overflow: hidden;
       transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
     }
 
     .video-card:hover {
@@ -454,6 +456,7 @@
       color: var(--text-primary);
       background: var(--bg-light);
       text-align: center;
+      flex: 1;
     }
 
     .video-placeholder {
@@ -1043,11 +1046,10 @@
       Generalization: Beyond Training Distributions
     </h2>
     <p class="prose">
-      A base policy trained on stacking 2 cubes and 4 cubes cannot generalize to stacking 3 cubes
-      (~0% success rate). VLS enables the same policy to generalize cleanly beyond seen configurations.
+      VLS enables policies to generalize beyond training distributions and follow complex steering instructions.
     </p>
 
-    <h3 class="video-section-title">Generalization Results</h3>
+    <h3 class="video-section-title">Cube Stacking Generalization</h3>
     <div class="video-grid">
       <div class="video-card">
         <video autoplay muted loop playsinline>
@@ -1066,6 +1068,39 @@
           <source src="./static/videos/stack_4.mp4" type="video/mp4">
         </video>
         <div class="video-label">In-Distribution: Stack 4 cubes</div>
+      </div>
+    </div>
+
+    <h3 class="video-section-title">Collision Avoidance via Steering</h3>
+    <div class="video-grid">
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/collision_base.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">
+          <span>In-Distribution</span>
+          <br>Base Policy
+          <br><em>"Put the red cube onto the green patch"</em>
+        </div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/collision_nosteer.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">
+          <span>Out-of-Distribution</span>
+          <br><em>"Put the red cube onto the green patch while avoiding the wall"</em>
+        </div>
+      </div>
+      <div class="video-card">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/collision_steer.mp4" type="video/mp4">
+        </video>
+        <div class="video-label">
+          <span>Out-of-Distribution</span>
+          <br>Base Policy + VLS
+          <br><em>"Put the red cube onto the green patch while avoiding the wall"</em>
+        </div>
       </div>
     </div>
   </div>
