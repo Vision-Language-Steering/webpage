@@ -459,6 +459,64 @@
       flex: 1;
     }
 
+    .demo-top-label {
+      padding: 14px 16px 10px;
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .demo-comparison-card .demo-caption {
+      padding: 14px 16px 16px;
+      background: var(--bg-light);
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .demo-method {
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    .demo-method.fail {
+      color: #dc2626;
+    }
+
+    .demo-method.success {
+      color: #16a34a;
+    }
+
+    .demo-comparison-card .demo-quote {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: var(--text-primary);
+      font-style: italic;
+    }
+
+    .hl-red {
+      color: #dc2626;
+      font-weight: 600;
+    }
+
+    .hl-green {
+      color: #16a34a;
+      font-weight: 600;
+    }
+
+    .hl-purple {
+      color: #9333ea;
+      font-weight: 600;
+    }
+
     .video-placeholder {
       aspect-ratio: 16/10;
       background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
@@ -1052,54 +1110,101 @@
     <h3 class="video-section-title">Cube Stacking Generalization</h3>
     <div class="video-grid">
       <div class="video-card">
+        <div class="demo-top-label">(In-distribution)</div>
         <video autoplay muted loop playsinline>
           <source src="./static/videos/stack_2.mp4" type="video/mp4">
         </video>
-        <div class="video-label">In-Distribution: Stack 2 cubes</div>
+        <div class="video-label">Stack 2 cubes</div>
       </div>
       <div class="video-card">
+        <div class="demo-top-label">(Out-of-distribution)</div>
         <video autoplay muted loop playsinline>
           <source src="./static/videos/stack_3.mp4" type="video/mp4">
         </video>
-        <div class="video-label">Out-of-Distribution: Stack 3 cubes</div>
+        <div class="video-label">Stack 3 cubes</div>
       </div>
       <div class="video-card">
+        <div class="demo-top-label">(In-distribution)</div>
         <video autoplay muted loop playsinline>
           <source src="./static/videos/stack_4.mp4" type="video/mp4">
         </video>
-        <div class="video-label">In-Distribution: Stack 4 cubes</div>
+        <div class="video-label">Stack 4 cubes</div>
       </div>
     </div>
 
     <h3 class="video-section-title">Collision Avoidance via Steering</h3>
     <div class="video-grid">
       <div class="video-card">
+        <div class="demo-top-label">(In-distribution)</div>
         <video autoplay muted loop playsinline>
           <source src="./static/videos/collision_base.mp4" type="video/mp4">
         </video>
         <div class="video-label">
-          <span>In-Distribution</span>
-          <br>Base Policy
-          <br><em>"Put the red cube onto the green patch"</em>
+          <span class="demo-method">Base Policy</span>
+          <br><em>"Put the <span class="hl-red">red</span> cube onto the <span class="hl-green">green</span> patch"</em>
         </div>
       </div>
       <div class="video-card">
+        <div class="demo-top-label">(Out-of-distribution)</div>
         <video autoplay muted loop playsinline>
           <source src="./static/videos/collision_nosteer.mp4" type="video/mp4">
         </video>
         <div class="video-label">
-          <span>Out-of-Distribution</span>
-          <br><em>"Put the red cube onto the green patch while avoiding the wall"</em>
+          <span class="demo-method fail">Base Policy</span>
+          <br>
+          <em>"Put the <span class="hl-red">red</span> cube onto the <span class="hl-green">green</span> patch while avoiding the wall"</em>
         </div>
       </div>
       <div class="video-card">
+        <div class="demo-top-label">(Out-of-distribution)</div>
         <video autoplay muted loop playsinline>
           <source src="./static/videos/collision_steer.mp4" type="video/mp4">
         </video>
         <div class="video-label">
-          <span>Out-of-Distribution</span>
-          <br>Base Policy + VLS
-          <br><em>"Put the red cube onto the green patch while avoiding the wall"</em>
+          <span class="demo-method success">Base Policy + VLS</span>
+          <br><em>"Put the <span class="hl-red">red</span> cube onto the <span class="hl-green">green</span> patch while avoiding the wall"</em>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="video-section-title" style="margin-top: 40px;">Instruction Generalization via Steering</h3>
+    <div class="video-grid">
+      <div class="video-card demo-comparison-card">
+        <div class="demo-top-label">(In-distribution)</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/episode_4_success_base_camera.mp4" type="video/mp4">
+        </video>
+        <div class="demo-caption">
+          <div class="demo-method">Pi-05</div>
+          <div class="demo-quote">
+            "Rotate the cube with the <span class="hl-red">red</span> color facing upward and then press the green button."
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card demo-comparison-card">
+        <div class="demo-top-label">(Out-of-distribution)</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/episode_1_fail_base_camera.mp4" type="video/mp4">
+        </video>
+        <div class="demo-caption">
+          <div class="demo-method fail">Pi-05</div>
+          <div class="demo-quote">
+            "Rotate the cube with the <span class="hl-purple">purple</span> color facing upward and then press the green button."
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card demo-comparison-card">
+        <div class="demo-top-label">(Out-of-distribution)</div>
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/episode_9_success_base_camera.mp4" type="video/mp4">
+        </video>
+        <div class="demo-caption">
+          <div class="demo-method success">Pi-05 + VLS</div>
+          <div class="demo-quote">
+            "Rotate the cube with the <span class="hl-purple">purple</span> color facing upward and then press the green button."
+          </div>
         </div>
       </div>
     </div>
