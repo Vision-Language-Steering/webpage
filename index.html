@@ -103,6 +103,44 @@
       margin-bottom: 32px;
     }
 
+    .publication-details {
+      margin: 28px 0 32px;
+    }
+
+    .publication-venue {
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .publication-award {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .publication-award + .publication-award {
+      margin-top: 8px;
+    }
+
+    .publication-award a {
+      color: inherit;
+      text-decoration: none;
+      text-underline-offset: 3px;
+    }
+
+    .publication-award a:hover,
+    .publication-award a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .publication-award strong {
+      display: inline-block;
+      color: #fbbf24;
+      font-weight: 600;
+    }
+
     .btn-group {
       display: flex;
       gap: 12px;
@@ -645,6 +683,15 @@
       <p style="font-size: 0.9rem; color: rgba(255,255,255,0.9); margin-bottom: 20px;">
         <sup>*</sup>Co-advised
       </p>
+      <div class="publication-details">
+        <p class="publication-venue">Conference on Robot Learning (CoRL) 2026</p>
+        <p class="publication-award">
+          <a href="https://3d-llm-vla.github.io/" target="_blank" rel="noopener noreferrer">3D-LLM/VLA Workshop @ CVPR 2026</a>, <strong>Best Paper Runner-Up</strong>
+        </p>
+        <p class="publication-award">
+          <a href="https://foundation-models-meet-embodied-agents.github.io/cvpr2026/" target="_blank" rel="noopener noreferrer">Foundation Models Meet Embodied Agents Workshop @ CVPR 2026</a>, <strong>Outstanding Paper Award</strong>
+        </p>
+      </div>
       <div class="btn-group">
         <a href="./VLS.pdf" class="btn btn-primary">
           <i class="fas fa-file-pdf"></i> Paper
